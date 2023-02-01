@@ -1,16 +1,16 @@
-# React Native Prevent Screenshot
+# React Native Prevent Screenshot & Record
 
-## Prevent Capture Screen
+## Prevent Capture Screen & Record
 
 ### Android
 
-* Prevent capture screen by setFlag secure
+- Prevent capture screen by setFlag secure
 
 ```java
 getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
 ```
 
-* If you want to remove flag secure
+- If you want to remove flag secure
 
 ```java
 getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
@@ -21,14 +21,15 @@ getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SECURE);
 You can't prevent screen capture on iOS.
 
 I have suggested 2 methods
+
 1. After the user capture screen (UIApplicationUserDidTakeScreenshot), send the capture event to the server or display a warning message.
-2. Try ScreenShieldKit (https://screenshieldkit.com). You can read more from this article. https://medium.com/nomtek/screenshot-preventing-on-mobile-apps-9e62f51643e9
+2. Try ScreenShieldKit (https://screenshieldkit.com).
 
 ## Hide Preview Screenshot
 
 ### Android
 
-* SetFlag secure already hide preview screenshot
+- SetFlag secure already hide preview screenshot
 
 ```java
 getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
@@ -36,7 +37,7 @@ getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.Layou
 
 ### iOS
 
-* Overlay screen by added 2 two into appDelegate.m
+- Overlay screen by added 2 two into appDelegate.m
 
 ```objective-c
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -67,9 +68,3 @@ colourView.alpha = 0;
 }];
 }
 ```
-
-#### References
-
-* http://pinkstone.co.uk/how-to-control-the-preview-screenshot-in-the-ios-multitasking-switcher/
-* https://stackoverflow.com/a/48228319/1754750
-* https://medium.com/nomtek/screenshot-preventing-on-mobile-apps-9e62f51643e9

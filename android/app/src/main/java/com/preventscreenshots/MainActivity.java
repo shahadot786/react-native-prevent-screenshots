@@ -5,6 +5,7 @@ import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
 
+//for screenshot & record
 import android.os.Bundle;
 import android.view.WindowManager;
 
